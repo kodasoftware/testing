@@ -17,6 +17,7 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
+      - run: npm run lint
       - run: npm run compile --ignore-scripts
       - run: npm publish --ignore-scripts --access public
         env:
