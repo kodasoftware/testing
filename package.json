@@ -1,0 +1,66 @@
+{
+  "name": "@kodasoftware/testing",
+  "version": "0.0.0",
+  "description": "A typescript testing library for Koa APIs or Cypress e2e testing",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "engines": {
+    "node": ">=16",
+    "vscode": ">=1.22"
+  },
+  "keywords": [
+    "app",
+    "kodasoftware",
+    "testing",
+    "jest",
+    "cypress",
+    "koa",
+    "nock",
+    "typescript"
+  ],
+  "scripts": {
+    "compile": "tsc",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "clean": "rimraf dist",
+    "precompile": "npm run clean",
+    "prepack": "npm run compile",
+    "prepublish": "npm run compile"
+  },
+  "author": "Koda Software <developer@kodasoftware.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@kodasoftware/typescript": "^0.0.0",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/jest": "^29.5.12",
+    "@types/koa": "^2.14.0",
+    "@types/node": "^20.11.18",
+    "@typescript-eslint/eslint-plugin": ">=7",
+    "@typescript-eslint/parser": ">=7",
+    "eslint": ">=8",
+    "eslint-config-prettier": ">=9",
+    "eslint-plugin-jest": ">=27",
+    "eslint-plugin-node": ">=11",
+    "eslint-plugin-prettier": ">=5",
+    "eslint-plugin-simple-import-sort": ">=12",
+    "prettier": ">=3",
+    "prettier-eslint": ">=16",
+    "typescript": ">=5"
+  },
+  "dependencies": {
+    "@pact-foundation/pact": "^12.2.0",
+    "@shopify/jest-koa-mocks": "^5.1.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "nock": ">=13"
+  },
+  "peerDependencies": {
+    "jest": ">=29",
+    "jest-junit": ">=16",
+    "ts-jest": ">=29",
+    "ts-node": ">=10"
+  }
+}
